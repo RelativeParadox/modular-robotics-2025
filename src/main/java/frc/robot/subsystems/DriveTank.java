@@ -57,6 +57,6 @@ public class DriveTank {
 
     public void drivetrain_periodic(XboxController m_driverController)
     {
-        m_robotDrive.tankDrive(-m_driverController.getLeftY(), -m_driverController.getRightY());
+        m_robotDrive.tankDrive(m_driverController.getLeftY(), m_driverController.getRightY());
     }
 }

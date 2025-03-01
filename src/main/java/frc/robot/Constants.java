@@ -15,8 +15,8 @@ public final class Constants {
         public static final int rightFollowerID = 4;
 
         //Stall Limit
-        public static final int motorStallLimit = 50;
-		public static final MotorType motorType = MotorType.kBrushless;
+        public static final int motorStallLimit = 20;
+		public static final MotorType motorType = MotorType.kBrushed;
     }
 
 	public static class RollerConstants
