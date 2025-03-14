@@ -3,8 +3,9 @@ package frc.robot.subsystems;
 import com.revrobotics.spark.SparkMax;
 
 import frc.robot.Constants.RollerConstants;
+import frc.robot.Subsystem;
 
-public class Roller {
+public class Roller extends Subsystem{
 
     //Roller Motor Controller
     private SparkMax m_rollerMotor = new SparkMax(RollerConstants.rollerMotorID, RollerConstants.rollerMotorType);

@@ -10,8 +10,9 @@ import edu.wpi.first.util.sendable.SendableRegistry;
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import frc.robot.Constants.DriveConstants;
+import frc.robot.Subsystem;
 
-public class DriveTank {
+public class DriveTank extends Subsystem{
     
     private final SparkMax m_leftLeader = new SparkMax(DriveConstants.leftLeaderID, DriveConstants.motorType);
     private final SparkMax m_leftFollower = new SparkMax(DriveConstants.leftFollowerID, DriveConstants.motorType);
