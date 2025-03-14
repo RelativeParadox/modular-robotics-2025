@@ -13,7 +13,7 @@ public class Sequencer {
     private Vector3 distance_progress;
     private double dead_zone = 0.1;
 
-    private double max_wheel_power = 0.25;
+    /*private double max_wheel_power = 0.25;
     private double begin_easing_distance = 1.0;
     private double easing_constant = 3; 
     private double min_wheel_power = 0.1;
@@ -21,10 +21,10 @@ public class Sequencer {
     private double last_rot_lf = 0.0;
     private double last_rot_lb = 0.0;
     private double last_rot_rf = 0.0;
-    private double last_rot_rb = 0.0;
+    private double last_rot_rb = 0.0;*/
 
-    private double wheel_radius = 0.5; //6 inch == 0.5 feet
-    private double wheel_circ = 2.0 * Math.PI * wheel_radius;
+    //private double wheel_radius = 0.5; //6 inch == 0.5 feet
+    //private double wheel_circ = 2.0 * Math.PI * wheel_radius;
      
     public Sequencer(Program new_program, Subsystem[] systems) {
         //init Code here

@@ -7,7 +7,6 @@ package frc.robot;
 import edu.wpi.first.cameraserver.CameraServer;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.XboxController;
-import frc.robot.sequencer.Sequencer;
 import frc.robot.subsystems.DriveMech;
 import frc.robot.subsystems.Roller;
 
@@ -21,6 +20,9 @@ public class Robot extends TimedRobot {
     private final DriveMech s_mainDrive = new DriveMech();
 	private final Roller s_roller = new Roller(); 
     //private Sequencer auto_sequencer = new Sequencer(null, null);
+
+    private double start_time = 0;
+    private double delta_time = 0;
 
     /** Called once at the beginning of the robot program. */
     public Robot() {
@@ -41,12 +43,20 @@ public class Robot extends TimedRobot {
 
     @Override
     public void autonomousInit() {
-        
+        start_time = System.currentTimeMillis();
     }
 
 	@Override
     public void autonomousPeriodic() {
+        delta_time = System.currentTimeMillis() - start_time;
 
+        if(delta_time <= 1000){
+            s_mainDrive.set_speed(0.25, 0.0, 0.0);
+        }
+        else
+        {
+            s_mainDrive.set_speed(0.0, 0.0, 0.0);
+        }
     }
 
     @Override
