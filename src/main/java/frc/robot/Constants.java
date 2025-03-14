@@ -17,7 +17,7 @@ public final class Constants {
         public static final int rightFollowerID = 5;
 
         //Stall Limit
-        public static final int motorStallLimit = 20;
+        public static final int motorStallLimit = 30;
 		public static final MotorType motorType = MotorType.kBrushless;
 
         public static final double deadzone = 0.15;
