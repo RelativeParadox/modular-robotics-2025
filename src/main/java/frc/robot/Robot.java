@@ -50,8 +50,8 @@ public class Robot extends TimedRobot {
     public void autonomousPeriodic() {
         delta_time = System.currentTimeMillis() - start_time;
 
-        if(delta_time <= 1000){
-            s_mainDrive.set_speed(0.25, 0.0, 0.0);
+        if(delta_time <= 1330){
+            s_mainDrive.set_speed(0.35, 0.0, 0.0);
         }
         else
         {
@@ -63,9 +63,9 @@ public class Robot extends TimedRobot {
     public void teleopPeriodic() {  
         s_mainDrive.drivetrain_periodic(m_driverController);
 
-		if(m_driverController.getAButton() == true) 
+		if(m_driverController.getXButton() == true) 
 		{
-			s_roller.set_speed(-0.20);
+			s_roller.set_speed(-0.2);
 		}
         else
         {
